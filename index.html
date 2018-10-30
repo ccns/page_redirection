@@ -1,5 +1,15 @@
 <html>
     <body>
-        Hello, Github Page!
+        <script>
+            const token_mapping = {
+                "": "https://www.ccns.io/",
+                "sa": "https://hackmd.io/c/rkC3tk8im/",
+            }
+        </script>
+        <script>
+            const urlParams = new URLSearchParams(window.location.search);
+            const token = urlParams.get("token");
+            window.location.replace(token_mapping[token]);
+        </script>
     </body>
 </html>
