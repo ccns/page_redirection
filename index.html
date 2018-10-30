@@ -2,8 +2,9 @@
     <body>
         <script>
             const token_mapping = {
-                null: "https://www.ccns.io/",
-                "": "https://www.ccns.io/",
+                get: function(target, name) {
+                    return target.hasOwnProperty(name) ? target[name] : "https://www.ccns.io/";
+                },
                 "sa": "https://hackmd.io/c/rkC3tk8im/",
                 "book": "https://hackmd.io/c/HyEmupOg7/",
             }
